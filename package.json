@@ -4,5 +4,9 @@
   },
   "dependencies": {
     "cypress-real-events": "^1.11.0"
+  },
+  "scripts": {
+    "add-plugins": "npm i cypress-real-events",
+    "run-all-tests": "npx cypress run --browser chrome --headless --env allure=true  --spec 'cypress/e2e/tests/**/mc-performance-test.cy.js'"
   }
 }
