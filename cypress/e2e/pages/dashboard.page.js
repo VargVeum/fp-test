@@ -8,10 +8,7 @@ const dashboardPageLocators = {
     pageTitle: 'h1',
     pageContent: 'body',
     threeStarsIcon: 'div[aria-label="3 out of 5"]',
-    fiveStartSideMenuFilter: 'div[data-filters-item="class:class=5"]',
-
-
-    
+    fiveStartSideMenuFilter: 'div[data-filters-item="class:class=5"]',   
 
 }
 
@@ -60,9 +57,7 @@ export class DashboardPage {
             .should('be.visible')
             .click();
         return this;
-    }
-
-    
+    }    
 
     fillLocationInput(value) {
         cy.get(dashboardPageLocators.locationInput)

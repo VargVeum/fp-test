@@ -1,12 +1,14 @@
 {
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
     "cypress": "^13.6.2"
   },
   "dependencies": {
+    "allure-commandline": "^2.25.0",
     "cypress-real-events": "^1.11.0"
   },
   "scripts": {
-    "add-plugins": "npm i cypress-real-events",
+    "add-plugins": "npm i cypress-real-events allure-commandline -D @shelex/cypress-allure-plugin",
     "run-all-tests": "npx cypress run --browser chrome --headless --env allure=true  --spec 'cypress/e2e/tests/**/mc-performance-test.cy.js'"
   }
 }

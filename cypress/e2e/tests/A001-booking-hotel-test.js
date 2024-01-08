@@ -9,7 +9,7 @@ describe('[A001] Dashboard tests: search hotels by location', function(){
         cy.clearLocalStorage();
         cy.clearCookies();
     });
-    it('#negative case: Sign in with empty email', () => {
+    it('#positive case: Search offers by location', () => {
         cy.visit(DASHBOARD_PAGE_URL)
         cy.url().should('contain', DASHBOARD_PAGE_URL);
 
