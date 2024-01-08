@@ -1,42 +1,41 @@
 ---
 runme:
-  id: 01HKMJ09FJRJQCP4P4W5ES8CEV
+  id: 01HKMKC9KWAE04RS2R4Z3E1PPF
   version: v2.0
 ---
 
-```sh {"id":"01HKMJAGTNYQXJHNVZ93K7QVJZ"}
-> # For opening project
+Clone test project from GitHub repo
 
-##### 1. Clone test project from GitHub repo
-~~~
+```sh {"id":"01HKMKCN1XJ6NX7EVQSAJN9BZ9"}
 git clone https://github.com/VargVeum/fp-test.git
-~~~
-##### 2. Open downloaded folder in terminal
-~~~
-cd fp-test
-~~~
-##### 4. Install Cypress.IO to downloaded folder with tests
-~~~
-npm install cypress --save-dev
-~~~
-##### 5. Download required Cypress add-ons
-~~~
-npm run add-plugins
-~~~
-IMPORTANT: List of required third-party plugins described in package.json in "add-plugins" command.
-##### 6. Run Cypress Runner
-~~~
-npx cypress open
-~~~
-##### 7. Run any test via clicking on its name in runner 
-~~~ 
-Passwords and some links are saved in separate files, which can be obtained from the QA automation or devops engineers. 
+```
 
-Here file name's for paste to downloaded projects:
-- cypress.config.js
-~~~
-> # Run tests on headless-mode
-~~~
+Open downloaded folder in terminal
+
+```sh {"id":"01HKMKDXWYBMT25PZ2HFGTM4MT"}
+cd fp-test
+```
+
+Install Cypress.IO to downloaded folder with tests
+
+```sh {"id":"01HKMKGD4A12B1G6R5MTPA8XD0"}
+npm install cypress --save-dev
+```
+
+Download required Cypress add-ons
+
+```sh {"id":"01HKMKGWCCDM7FV9324KHYHVQ9"}
+npm run add-plugins
+```
+
+Run Cypress Runner
+
+```sh {"id":"01HKMKHZSV5DBEHJMNFW0MWV1A"}
+npx cypress open
+```
+
+Run tests on headless-mode (with closed UI runner)
+
+```sh {"id":"01HKMKJYCWH9H18H45P657132P"}
 npx cypress run --config-file cypress.config.js --browser chrome --headless --spec 'cypress/e2e/tests/**.js'
-~~~
 ```
