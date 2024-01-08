@@ -1,4 +1,4 @@
-cypress.config.js
+cypress.config main.js
 node_modules
 cypress/videos
 cypress/screenshots

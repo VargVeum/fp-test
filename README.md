@@ -39,3 +39,9 @@ Run tests on headless-mode (with closed UI runner)
 ```sh {"id":"01HKMKJYCWH9H18H45P657132P"}
 npx cypress run --config-file cypress.config.js --browser chrome --headless --spec 'cypress/e2e/tests/**.js'
 ```
+
+IMPORTANT (!) From security reasons, config file with credentials isn't added to public repo. 
+You can receive it (cypress.config main.js) from QA from the project. 
+After receiving copy all data from it and paste to cypress.config.js
+
+Base config file for public demo doesn't contain credentials and some tests can be failed. 
