@@ -1,13 +1,9 @@
-// import { dashboardPageUrl, carrierTMSDashboardUrl } from '../../../../fixtures/baseUrls';
 import { DASHBOARD_PAGE_URL } from '../../helpers/baseUrls';
-import { signInData } from '../../helpers/testData';
-// import { UserHelper } from '../../../../helpers/userHelper';
-// import { carrierPageData, pageData, urlsData } from '../../../../fixtures/getMethods';
-import { SignInPage } from '../pages/sign.in.page';
+import { DashboardPage } from '../pages/dashboard.page';
+import { dashboardData } from '../../helpers/testData';
 
-
-describe('[A000] Login tests: positive & negative scenarios', function(){    
-    const signInPage = new SignInPage();
+describe('[A001] Dashboard tests: search hotels by location', function(){    
+    const dashboardPage = new DashboardPage();
     
     before(() => {
         cy.clearLocalStorage();
@@ -17,8 +13,18 @@ describe('[A000] Login tests: positive & negative scenarios', function(){
         cy.visit(DASHBOARD_PAGE_URL)
         cy.url().should('contain', DASHBOARD_PAGE_URL);
 
-        // signInPage.clickSubmitButton()
-        //     .checkError(signInData.emptyFieldError)
+        dashboardPage.checkWelcomeModal()
+            .fillLocationInput(dashboardData.kyivLocation)
+            .openCalendar()
+            .chooseCurrentAndPlusTwoDayDate()
+            .clickSubmitButton()
+        // Check that info about founded properties is displayed
+            .checkPageContent(dashboardData.kyivLocation)
+            .checkPageContent('properties found')
+        // Click side menu filter and check that filter was applied
+            .clickSideMenuFilter('5 stars')
+            .checkPageNotContainsElement()
+
     });
 
 

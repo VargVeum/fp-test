@@ -4,3 +4,7 @@ export const signInData = {
     dashboardPageTitle: 'Booking.com | Official site | The best hotels, flights, car rentals & accommodations'
 
 }
+
+export const dashboardData = {
+    kyivLocation: 'Kyiv'
+}

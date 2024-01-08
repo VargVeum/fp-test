@@ -1,10 +1,6 @@
-// import { dashboardPageUrl, carrierTMSDashboardUrl } from '../../../../fixtures/baseUrls';
 import { SIGNIN_PAGE_URL } from '../../helpers/baseUrls';
 import { signInData } from '../../helpers/testData';
-// import { UserHelper } from '../../../../helpers/userHelper';
-// import { carrierPageData, pageData, urlsData } from '../../../../fixtures/getMethods';
 import { SignInPage } from '../pages/sign.in.page';
-
 
 describe('[A000] Login tests: positive & negative scenarios', function(){    
     const signInPage = new SignInPage();
